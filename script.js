@@ -1,6 +1,6 @@
 function updateRate() {
     var rateval = document.getElementById("rate").value;
-    document.getElementById("rate_val").innerText = rateval;
+    document.getElementById("rate_val").innerText = rateval+"%";
 }
 const rateIn = document.getElementById("rate");
 rateIn.addEventListener('change', updateRate);
@@ -14,12 +14,12 @@ var year = new Date().getFullYear() + parseInt(years);
     if (principal <= 0) {
         alert("Enter a positive number")
         document.getElementById("principal").focus();
-    } else{
-    document.getElementById("result").innerHTML = `
-    If you deposit <mark>${principal}</mark>,
-    at an interest rate of <mark>${rate}%</mark>.
-    You will receive an amount of <mark>${interest}</mark>,
-    in the year <mark>${year}</mark>
+    }
+    document.getElementById("result").innerHTML = `<br/>
+    If you deposit <mark>${principal}</mark>,<br/>
+    at an interest rate of <mark>${rate}%</mark>.<br/>
+    You will receive an amount of <mark>${interest}</mark>,<br/>
+    in the year <mark>${year}</mark><br/>
     `
-}
+
 }
